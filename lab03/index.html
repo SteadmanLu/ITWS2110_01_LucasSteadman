@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>League Weather & Trivia</title>
+  <link rel="stylesheet" href="weather.css">
+  <script src="weather.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Today's Useless Fact</h1>
+    <div id="todays-fact-output"></div>
+
+    <h1>Weather in Troy, NY</h1>
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="weather-output"></div>
+
+    <h1>Bonus Useless Fact</h1>
+    <button onclick="getUselessFact()">Get Useless Fact</button>
+    <div id="useless-fact-output"></div>
+
+    <h1>Double Trouble</h1>
+    <button onclick="getWeather(); getUselessFact();">Get Both</button>
+  </div>
+</body>
+</html>
