@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather & Cocktail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather & Cocktail Finder 🍸</h1>
+
+    <div class="controls">
+      <input type="text" id="cityInput" placeholder="Enter city" />
+      <button id="searchBtn">Search</button>
+      <div class="unit-toggle">
+        <label>
+          <input type="radio" name="unit" value="metric" checked> °C
+        </label>
+        <label>
+          <input type="radio" name="unit" value="imperial"> °F
+        </label>
+      </div>
+    </div>
+
+    <div id="weather" class="card"></div>
+    <div id="cocktail" class="card"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
