@@ -1,0 +1,73 @@
+{
+  "dishes": [
+    {
+      "name": "Fried Rice with Egg",
+      "description": "Savory fried rice topped with a perfectly cooked sunny-side-up egg, featuring mixed vegetables and aromatic seasonings",
+      "category": "vegetarian",
+      "cuisine": "Asian Fusion",
+      "image": "https://cdn.pixabay.com/photo/2014/01/09/10/14/kimchi-fried-rice-241051_1280.jpg",
+      "ingredients": [
+        "White rice",
+        "Egg",
+        "Carrots",
+        "Peas",
+        "Soy sauce",
+        "Garlic",
+        "Green onions",
+        "Sesame oil"
+      ],
+      "price": "$12.99"
+    },
+    {
+      "name": "Focaccia Bread",
+      "description": "Fresh-baked Italian flatbread with herbs, olive oil, and sea salt - perfect for dipping or as a side",
+      "category": "vegan",
+      "cuisine": "Italian",
+      "image": "https://cdn.pixabay.com/photo/2017/04/19/03/27/focaccia-2241106_1280.jpg",
+      "ingredients": [
+        "Bread flour",
+        "Olive oil",
+        "Fresh rosemary",
+        "Sea salt",
+        "Garlic",
+        "Yeast",
+        "Water"
+      ],
+      "price": "$6.99"
+    },
+    {
+      "name": "Buffalo Chicken Wings",
+      "description": "Crispy chicken wings tossed in tangy buffalo sauce, served with cool ranch dressing and celery sticks",
+      "category": "non-vegetarian",
+      "cuisine": "American",
+      "image": "https://cdn.pixabay.com/photo/2017/09/03/01/17/wings-2709068_1280.jpg",
+      "ingredients": [
+        "Chicken wings",
+        "Buffalo sauce",
+        "Butter",
+        "Hot sauce",
+        "Ranch dressing",
+        "Celery",
+        "Blue cheese crumbles"
+      ],
+      "price": "$13.99"
+    },
+    {
+      "name": "BEC Breakfast Sandwich",
+      "description": "Classic bacon, egg, and cheese sandwich on a toasted English muffin - the perfect way to start your day",
+      "category": "non-vegetarian",
+      "cuisine": "American",
+      "image": "https://cdn.pixabay.com/photo/2022/11/21/11/24/sandwich-7606793_1280.jpg",
+      "ingredients": [
+        "English muffin",
+        "Bacon",
+        "Fried egg",
+        "American cheese",
+        "Butter",
+        "Salt",
+        "Pepper"
+      ],
+      "price": "$8.99"
+    }
+  ]
+}
