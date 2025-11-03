@@ -61,42 +61,19 @@ class Division extends Operation {
 
 // End Part 1
 
-
-
-
-// Some debugs - un comment them to see what is happening...
-// echo '$_POST print_r=>',print_r($_POST);
-// echo "<br>",'$_POST vardump=>',var_dump($_POST);
-// echo '<br/>$_POST is ', (isset($_POST) ? 'set' : 'NOT set'), "<br/>";
-// echo "<br/>---";
-
-
-
+$err = Array();
+$op = null;
 
 // Check to make sure that POST was received 
-// upon initial load, the page will be sent back via the initial GET at which time
-// the $_POST array will not have values - trying to access it will give undefined message
-
-  if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $o1 = $_POST['op1'];
-    $o2 = $_POST['op2'];
-  }
-  $err = Array();
-
-
-// Part 2 - Instantiate an object for each operation based on the values returned on the form
-//          For example, check to make sure that $_POST is set and then check its value and 
-//          instantiate its object
-// 
-// The Add is done below.  Go ahead and finish the remaining functions.  
-// Then tell me if there is a way to do this without the ifs
-
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $o1 = $_POST['op1'];
+  $o2 = $_POST['op2'];
+  
+  // Part 2 - Instantiate an object for each operation
   try {
     if (isset($_POST['add']) && $_POST['add'] == 'Add') {
       $op = new Addition($o1, $o2);
     }
-// Put the code for Part 2 here  \/
-
     else if (isset($_POST['sub']) && $_POST['sub'] == 'Subtract') {
       $op = new Subtraction($o1, $o2);
     }
@@ -106,13 +83,12 @@ class Division extends Operation {
     else if (isset($_POST['div']) && $_POST['div'] == 'Divide') {
       $op = new Division($o1, $o2);
     }
-
-// End of Part 2   /\
-
   }
   catch (Exception $e) {
     $err[] = $e->getMessage();
   }
+}
+
 ?>
 
 <!doctype html>
@@ -137,9 +113,9 @@ class Division extends Operation {
     } 
   ?>
   </pre>
-  <form method="post" action="lab6.php">
-    <input type="text" name="op1" id="name" value="" />
-    <input type="text" name="op2" id="name" value="" />
+  <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <input type="text" name="op1" id="op1" value="" />
+    <input type="text" name="op2" id="op2" value="" />
     <br/>
     <!-- Only one of these will be set with their respective value at a time -->
     <input type="submit" name="add" value="Add" />  
