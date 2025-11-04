@@ -3,7 +3,7 @@ abstract class Operation {
   protected $operand_1;
   protected $operand_2;
   public function __construct($o1, $o2) {
-    // Make sure we're working with numbers...
+    // Make sure the user entered numbers
     if (!is_numeric($o1) || !is_numeric($o2)) {
       throw new Exception('Non-numeric operand.');
     }
@@ -97,8 +97,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 <title>Lab 6</title>
 </head>
 <body>
+  <h1>PHP Calculator</h1>
   <pre id="result">
-  <?php 
+    <?php 
     if (isset($op)) {
       try {
         echo $op->getEquation();
@@ -111,8 +112,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     foreach($err as $error) {
         echo $error . "\n";
     } 
-  ?>
+    ?>
   </pre>
+  
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <input type="text" name="op1" id="op1" value="" />
     <input type="text" name="op2" id="op2" value="" />
@@ -121,7 +123,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <input type="submit" name="add" value="Add" />  
     <input type="submit" name="sub" value="Subtract" />  
     <input type="submit" name="mult" value="Multiply" />  
-    <input type="submit" name="div" value="Divide" />  
+    <input type="submit" name="div" value="Divide" /> 
   </form>
 </body>
 </html>
