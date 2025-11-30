@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'admin');
 define('DB_PASS', 'della?20');
-define('DB_NAME', 'ITWS2110-Fall2025-yourRCSID-Quiz2');
+define('DB_NAME', 'ITWS2110-Fall2025-Steadl2-Quiz2');
 
 // Create connection
 function getDBConnection() {
