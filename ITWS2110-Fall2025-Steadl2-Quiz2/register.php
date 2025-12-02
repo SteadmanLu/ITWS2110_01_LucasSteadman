@@ -116,7 +116,7 @@ if (isset($_SESSION['register_nickName'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Project Management System</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="register-container">
